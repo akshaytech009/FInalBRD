@@ -19,6 +19,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 import com.nucleus.model.Customer;
 import com.nucleus.model.Role;
+import com.nucleus.model.User;
+
 
 @Configuration
 @EnableWebMvc
@@ -57,14 +59,15 @@ public class AppConfig {
 		props.put("hibernate.hbm2ddl.auto", "update");
 		builder.addProperties(props);
 		builder.addAnnotatedClass(Customer.class);
+		builder.addAnnotatedClass(User.class);
 		builder.addAnnotatedClass(Role.class);
 		return builder.buildSessionFactory();
 	}
 
 	@Bean
-	public HibernateTransactionManager manager(SessionFactory factory) {
+	public HibernateTransactionManager manager(SessionFactory sessionFactory) {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-		transactionManager.setSessionFactory(factory);
+		transactionManager.setSessionFactory(sessionFactory);
 		return transactionManager;
 
 	}

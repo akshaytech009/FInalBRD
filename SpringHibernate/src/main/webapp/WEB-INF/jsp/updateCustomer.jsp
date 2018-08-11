@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Delete user</title>
+<title>Update user</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -14,6 +14,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<script type="text/javascript">
+	window.history.forward();
+	function noBack() {
+		window.history.forward();
+	}
+</script>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();"
 	onUnload="">
 	<!-- <nav class="navbar navbar-inverse">
@@ -32,7 +38,7 @@
 					<li><a href="viewall">All</a></li>
 
 				</ul></li>
-			<li><a href="deleteUser">Delete</a></li>
+			<li><a href="deleteCustomer">Delete</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -41,29 +47,23 @@
 		</ul>
 	</div>
 	</nav> -->
-	<form action="delete" method="post">
+	<form action="updatevalue" method="post">
 		<div class="container">
 
 			<hr>
 
-			<label for="username"><b>username</b></label> <input
-				type="text" placeholder="Enter Customer Code" name="username"
+			<label for="cutomer Code"><b>Customer Code</b></label> <input
+				type="text" placeholder="Enter Customer Code" name="customerCode"
 				required>
 
 
 			<hr>
 
-			<button type="submit" class="registerbtn">Delete</button>
+			<button type="submit" class="registerbtn">Update</button>
 		</div>
 
 		<div class="container signin"></div>
 	</form>
-	<script type="text/javascript">
-		window.history.forward();
-		function noBack() {
-			window.history.forward();
-		}
-	</script>
 
 </body>
 </html>

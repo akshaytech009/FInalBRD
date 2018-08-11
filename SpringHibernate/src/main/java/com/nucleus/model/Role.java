@@ -8,46 +8,59 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Role153")
+@Table(name = "Role153")
 public class Role {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
-	@Column(name="Role")
+	@Column(name = "Role")
 	private String role;
-	@Column(name="Description")
+	@Column(name = "Description")
 	private String description;
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getRole() {
 		return role;
 	}
+
 	public void setRole(String role) {
 		this.role = role;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Role(){
-		
+
+	public Role() {
+
 	}
+
 	public Role(int id, String role, String description) {
 		super();
 		this.id = id;
+//		if(role=="user")
+//		{
+//			
+//		}
 		this.role = role;
 		this.description = description;
 	}
+
 	@Override
 	public String toString() {
 		return "Role [id=" + id + ", role=" + role + ", description="
 				+ description + "]";
 	}
-	
+
 }

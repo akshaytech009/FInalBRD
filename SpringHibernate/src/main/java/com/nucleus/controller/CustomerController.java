@@ -15,6 +15,7 @@ import com.nucleus.model.Customer;
 import com.nucleus.service.CustomerService;
 
 @Controller
+//@RequestMapping("/customer")
 public class CustomerController {
 	@Autowired
 	CustomerService customerService;
@@ -22,16 +23,16 @@ public class CustomerController {
 	@RequestMapping(value = "/")
 	public String ShowLoginForm() {
 
-		return "home";
+		return "Split";
 	}
 
-	@RequestMapping("/adduser")
+	@RequestMapping("/addCustomer")
 	public ModelAndView adduser(Customer customer) {
 
-		return new ModelAndView("NewUser");
+		return new ModelAndView("NewDetails");
 	}
 
-	@RequestMapping("/newUser")
+	@RequestMapping("/newCustomer")
 	public ModelAndView addnewUser(Customer customer) {
 
 		customerService.addcustomer(customer);
@@ -39,22 +40,22 @@ public class CustomerController {
 
 	}
 
-	@RequestMapping(value = "/deleteuser", method = RequestMethod.GET)
+	@RequestMapping(value = "/deleteCustomer", method = RequestMethod.GET)
 	public String deleteuser() {
 
-		return "DeleteUser";
+		return "DeleteDetails";
 
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public String delete(Model model,
 			@RequestParam("customerCode") String customerCode) {
-		customerService.deleteCustomer(customerCode);
+		customerService.deleteCustomer(Integer.parseInt(customerCode));
 		return "deleteCustomer";
 
 	}
 
-	@RequestMapping(value = "/viewuser", method = RequestMethod.GET)
+	@RequestMapping(value = "/viewCustomer", method = RequestMethod.GET)
 	public String viewuser() {
 		return "viewOne";
 
@@ -63,7 +64,7 @@ public class CustomerController {
 	@RequestMapping(value = "/oneview", method = RequestMethod.POST)
 	public String oneview(Model model,
 			@RequestParam("customerCode") String customerCode) {
-		Customer customer = customerService.viewCustomer(customerCode);
+		Customer customer = customerService.viewCustomer(Integer.parseInt(customerCode));
 		model.addAttribute("customer", customer);
 
 		return "viewOneTable";
@@ -83,7 +84,7 @@ public class CustomerController {
 
 	@RequestMapping(value = "/update", method = RequestMethod.GET)
 	public String updateUser() {
-		return "updateUser";
+		return "updateCustomer";
 
 	}
 
@@ -93,7 +94,7 @@ public class CustomerController {
 	@RequestParam("customerCode") String customerCode,
 			@ModelAttribute Customer customer) {
 
-		customer = customerService.viewCustomer(customerCode);
+		customer = customerService.viewCustomer(Integer.parseInt(customerCode));
 		model.addAttribute("customer", customer);
 
 		return "updateDetails";

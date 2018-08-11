@@ -19,15 +19,15 @@ function noBack()
 </script>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
-<!-- <nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">UserDetails</a>
     </div>
     <ul class="nav navbar-nav">
       
-       <li class="active"><a href="addCustomer">newCustomer</a></li>
-       <li class="active"><a href="update">Update</a></li>
+       <li class="active"><a href="adduser">NewUser</a></li>
+       <!-- <li class="active"><a href="update">Update</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="viewCustomer">SingleView</a></li>
@@ -35,15 +35,15 @@ function noBack()
           
         </ul>
       </li>
-      <li><a href="deleteCustomer">Delete</a></li>
+      <li><a href="deleteCustomer">Delete</a></li> -->
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <!-- <ul class="nav navbar-nav navbar-right">
      
       <li><a href="LogOutController"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
-    </ul>
+    </ul> -->
   </div>
-</nav> -->
-successfully submission!!!
+</nav>
+successful submission!!!
 
 </body>
 </html>

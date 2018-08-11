@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<html lang="en">
 <head>
-<title>Delete user</title>
+<title>Home page</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -14,17 +15,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();"
-	onUnload="">
-	<!-- <nav class="navbar navbar-inverse">
+<body>
+
+	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#">UserDetails</a>
 		</div>
 		<ul class="nav navbar-nav">
+			<li class="active"><a href="adduser">NewUser</a></li>
+			<li><a href="deleteUser">Delete</a></li>
+			<!-- <li class="active"><a href="update">Update</a></li>
 
-			<li class="active"><a href="addCustomer">newCustomer</a></li>
-			<li class="active"><a href="update">Update</a></li>
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">View<span class="caret"></span></a>
 				<ul class="dropdown-menu">
@@ -32,38 +34,20 @@
 					<li><a href="viewall">All</a></li>
 
 				</ul></li>
-			<li><a href="deleteUser">Delete</a></li>
+			 -->
 		</ul>
-		<ul class="nav navbar-nav navbar-right">
+		<!-- <ul class="nav navbar-nav navbar-right">
 
 			<li><a href="LogOutController"><span
 					class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
-		</ul>
+		</ul> -->
 	</div>
-	</nav> -->
-	<form action="delete" method="post">
-		<div class="container">
+	</nav>
 
-			<hr>
+	<h1>welcome ${userName}</h1>
 
-			<label for="username"><b>username</b></label> <input
-				type="text" placeholder="Enter Customer Code" name="username"
-				required>
-
-
-			<hr>
-
-			<button type="submit" class="registerbtn">Delete</button>
-		</div>
-
-		<div class="container signin"></div>
-	</form>
-	<script type="text/javascript">
-		window.history.forward();
-		function noBack() {
-			window.history.forward();
-		}
-	</script>
+	<h2>${message}</h2>
+	<div class="container"></div>
 
 </body>
 </html>

@@ -13,7 +13,9 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"
+	type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
 </head>
 <script type="text/javascript">
 	window.history.forward();
@@ -21,23 +23,30 @@
 		window.history.forward();
 	}
 </script>
-<nav class="navbar navbar-inverse">
+<script type="text/javascript">
+ 	function autoRefreshPage() 
+ 	{
+ 		window.location=window.location.href;
+ 	} 
+ 	setInterval("autoRefreshPage()", 10000);
+</script>
+<!-- <nav class="navbar navbar-inverse">
 <div class="container-fluid">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="#">UserDetails</a>
 	</div>
 	<ul class="nav navbar-nav">
 
-		<li class="active"><a href="adduser">NewUser</a></li>
+		<li class="active"><a href="addCustomer">newCustomer</a></li>
 		<li class="active"><a href="update">Update</a></li>
 		<li class="dropdown"><a class="dropdown-toggle"
 			data-toggle="dropdown" href="#">View<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><a href="viewuser">SingleView</a></li>
+				<li><a href="viewCustomer">SingleView</a></li>
 				<li><a href="viewall">All</a></li>
 
 			</ul></li>
-		<li><a href="deleteuser">Delete</a></li>
+		<li><a href="deleteCustomer">Delete</a></li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 
@@ -45,8 +54,8 @@
 				class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
 	</ul>
 </div>
-</nav>
-<form action="/viewall" method="GET">
+</nav> -->
+<form action="viewall" method="GET">
 	<table style="width: 100%">
 		<thead>
 

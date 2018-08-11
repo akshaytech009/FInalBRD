@@ -32,7 +32,7 @@
 					<li><a href="viewall">All</a></li>
 
 				</ul></li>
-			<li><a href="deleteUser">Delete</a></li>
+			<li><a href="deleteCustomer">Delete</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -46,8 +46,8 @@
 
 			<hr>
 
-			<label for="username"><b>username</b></label> <input
-				type="text" placeholder="Enter Customer Code" name="username"
+			<label for="cutomer Code"><b>Customer Code</b></label> <input
+				type="text" placeholder="Enter Customer Code" name="customerCode"
 				required>
 
 

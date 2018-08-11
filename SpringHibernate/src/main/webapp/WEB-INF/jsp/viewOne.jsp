@@ -24,23 +24,23 @@
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();"
 	onUnload="">
 	>
-	<nav class="navbar navbar-inverse">
+	<!-- <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#">UserDetails</a>
 		</div>
 		<ul class="nav navbar-nav">
 
-			<li class="active"><a href="adduser">NewUser</a></li>
+			<li class="active"><a href="addCustomer">newCustomer</a></li>
 			<li class="active"><a href="update">Update</a></li>
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">View<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="viewuser">SingleView</a></li>
+					<li><a href="viewCustomer">SingleView</a></li>
 					<li><a href="viewall">All</a></li>
 
 				</ul></li>
-			<li><a href="deleteuser">Delete</a></li>
+			<li><a href="deleteCustomer">Delete</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -48,7 +48,7 @@
 					class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
 		</ul>
 	</div>
-	</nav>
+	</nav> -->
 	<form action="oneview" method="post">
 		Enter Customer Code:<br> <input type="text" name="customerCode"><br>
 		<input type="submit" value="Go">

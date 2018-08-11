@@ -24,13 +24,13 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Transactional
-	public void deleteCustomer(String customerCode) {
+	public void deleteCustomer(int customerCode) {
 		customerDao.deleteCustomer(customerCode);
 
 	}
 
 	@Transactional
-	public Customer viewCustomer(String customerCode) {
+	public Customer viewCustomer(int customerCode) {
 
 		return customerDao.viewCustomer(customerCode);
 	}

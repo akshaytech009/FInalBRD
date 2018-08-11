@@ -11,7 +11,7 @@ public class Customer {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(nullable = false, unique = true)
-	private String customerCode;
+	private int customerCode;
 	private String customerName;
 	private String customerAddress;
 	private String customerPincode;
@@ -24,11 +24,11 @@ public class Customer {
 	
  
 	
-	public String getCustomerCode() {
+	public int getCustomerCode() {
 		return customerCode;
 	}
 
-	public void setCustomerCode(String customerCode) {
+	public void setCustomerCode(int customerCode) {
 		this.customerCode = customerCode;
 	}
 
@@ -107,7 +107,7 @@ public class Customer {
 				+ ", modifiedDate=" + modifiedDate + "]";
 	}
 
-	public Customer(String customerCode, String customerName,
+	public Customer(int customerCode, String customerName,
 			String customerAddress, String customerPincode,
 			String customerEmail, String contactNumber,
 			String registrationDate, String createdBy, String modifiedDate) {

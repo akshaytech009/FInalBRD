@@ -22,7 +22,7 @@
     </div>
     <ul class="nav navbar-nav">
       
-       <li class="active"><a href="adduser">NewUser</a></li>
+       <li class="active"><a href="addCustomer">newCustomer</a></li>
        <li class="active"><a href="update">Update</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -40,30 +40,30 @@
   </div>
 </nav> -->
 
-<form:form  name ="userForm" action="newUser" modelAttribute = "user">
+<form:form  name ="userForm" action="newCustomer" modelAttribute = "customer">
 <TABLE>
   <TR>
-    <TD>Username</TD>
+    <TD>Customer Code</TD>
     <TD>
-    	<form:input path="username" NAME="username" required="required"/>
+    	<form:input path="customerCode" NAME="customerCode" required="required"/>
     </TD>
   </TR>
    <TR>
-    <TD>password</TD>
+    <TD>Customer Name</TD>
     <TD>
-      <form:input path="password" NAME="password" required="required"/>
+      <form:input path="customerName" NAME="customerName" required="required"/>
     </TD>
   </TR>
   
 <TR>
-    <TD>Role</TD>
+    <TD>Customer ADDRESS</TD>
     <TD>
-      <form:input path="Role.role" NAME="Role.role" required="required"/>
+      <form:input path="customerAddress" NAME="customerAddress" required="required"/>
     </TD>
   </TR>
   
  
- <%--  <TR>
+  <TR>
     <TD>PinCode</TD>
     <TD>
       <form:input path="customerPincode" NAME="customerPincode" required="required"/>
@@ -84,7 +84,7 @@
     </TD>
   </TR>
   
-<TR>
+<%-- <TR>
     <TD>Registration Date </TD>
     <TD>
       <form:input path="registrationDate" NAME="registrationDate" required="required"/>
@@ -100,15 +100,15 @@
 </tr>
 <tr>
  
-
+ --%>
  
-  <TR>
+<%--   <TR>
     <TD>Created By </TD>
     <TD>
     <form:input path="createdBy" NAME="createdBy" value ="${username}" readOnly="readOnly"/>
     </TD>
 
-  --%> 
+  --%>
   <TR>
  <TD><input   type="SUBMIT"  value="submit" ><br></TD>
 </TR>

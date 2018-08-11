@@ -23,17 +23,17 @@
 			<a class="navbar-brand" href="#">UserDetails</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="adduser">NewUser</a></li>
-			<li class="active"><a href="update">Update</a></li>
+			<li class="active"><a href="addCustomer" target="iframe_b">New</a></li>
+			<li class="active"><a href="update" target="iframe_b">Update</a></li>
 
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">View<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="viewuser">SingleView</a></li>
-					<li><a href="viewall">All</a></li>
+					<li><a href="viewCustomer" target="iframe_b">SingleView</a></li>
+					<li><a href="viewall" target="iframe_b">All</a></li>
 
 				</ul></li>
-			<li><a href="deleteuser">Delete</a></li>
+			<li><a href="deleteCustomer" target="iframe_b">Delete</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -41,9 +41,9 @@
 					class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
 		</ul>
 	</div>
-	</nav>
+	</nav> 
 
-	<h1>welcome ${userName}</h1>
+	<h1>welcome Akshay</h1>
 
 	<h2>${message}</h2>
 	<div class="container"></div>

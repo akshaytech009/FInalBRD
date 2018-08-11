@@ -14,37 +14,37 @@ import com.nucleus.model.Customer;
 public class CustomerDaoImpl implements CustomerDao {
 
 	@Autowired
-	SessionFactory factory;
+	SessionFactory sessionFactory;
 
 	public Customer addCustomer(Customer customer) {
 		Date date = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy");
 		customer.setRegistrationDate(format.format(date));
-		factory.getCurrentSession().saveOrUpdate(customer);
+		sessionFactory.getCurrentSession().saveOrUpdate(customer);
 		return customer;
 	}
 
-	public void deleteCustomer(String customerCode) {
+	public void deleteCustomer(int customerCode) {
 		Customer customer = new Customer();
 		customer.setCustomerCode(customerCode);
-		factory.getCurrentSession().delete(customer);
+		sessionFactory.getCurrentSession().delete(customer);
 
 	}
 
-	public Customer viewCustomer(String customerCode) {
-		Customer customer = (Customer) factory.getCurrentSession().get(Customer.class, customerCode);
+	public Customer viewCustomer(int customerCode) {
+		Customer customer = (Customer) sessionFactory.getCurrentSession().get(Customer.class, customerCode);
 		return customer;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Customer> getAllCustomers() {
 		
-		return factory.getCurrentSession().createCriteria(Customer.class).list();
+		return sessionFactory.getCurrentSession().createCriteria(Customer.class).list();
 	}
 
 	public Customer updateCustomer(Customer customer) {
 		
-		factory.getCurrentSession().update(customer);
+		sessionFactory.getCurrentSession().update(customer);
 		return customer;
 	}
 }

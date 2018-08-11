@@ -7,8 +7,8 @@ import com.nucleus.model.Customer;
 public interface CustomerService {
 
 	public Customer addcustomer(Customer customer);
-	public void deleteCustomer(String customerCode);
-	public Customer viewCustomer(String customerCode);
+	public void deleteCustomer(int customerCode);
+	public Customer viewCustomer(int customerCode);
 	public List<Customer> viewAll();
 	public Customer updateCustomer(Customer customer);
 }
