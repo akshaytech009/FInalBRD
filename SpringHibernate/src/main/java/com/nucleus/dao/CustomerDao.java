@@ -11,5 +11,6 @@ public interface CustomerDao {
 	public Customer viewCustomer(int customerCode);
 	public List<Customer> getAllCustomers();
 	public Customer updateCustomer(Customer customer);
+//	public void logout();
 
 }

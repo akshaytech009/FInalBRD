@@ -26,11 +26,13 @@ import com.nucleus.model.User;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = { "com.nucleus.controller", "com.nucleus.dao",
-		"com.nucleus.service", "com.nucleus.model" })
-public class AppConfig {
+		"com.nucleus.service", "com.nucleus.model" , "com.nucleus.configuration"})
+public class AppConfig 
+{
 
 	@Bean
-	public ViewResolver jspViewResolver() {
+	public ViewResolver jspViewResolver() 
+	{
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/jsp/");
 		resolver.setSuffix(".jsp");
@@ -65,7 +67,8 @@ public class AppConfig {
 	}
 
 	@Bean
-	public HibernateTransactionManager manager(SessionFactory sessionFactory) {
+	public HibernateTransactionManager manager(SessionFactory sessionFactory) 
+	{
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
 		transactionManager.setSessionFactory(sessionFactory);
 		return transactionManager;

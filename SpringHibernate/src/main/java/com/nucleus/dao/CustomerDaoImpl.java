@@ -43,8 +43,15 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	public Customer updateCustomer(Customer customer) {
-		
+		Date date = new Date();
+		SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy");
+		customer.setModifiedDate(format.format(date));
 		sessionFactory.getCurrentSession().update(customer);
 		return customer;
 	}
+
+//	public void logout() {
+//		sessionFactory.getCurrentSession().close();
+//		
+//	}
 }

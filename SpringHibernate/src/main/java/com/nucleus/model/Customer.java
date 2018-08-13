@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name = "Customer153")
 public class Customer {
 	@Id
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(nullable = false, unique = true)
 	private int customerCode;
 	private String customerName;
@@ -21,9 +20,6 @@ public class Customer {
 	private String createdBy;
 	private String modifiedDate;
 
-	
- 
-	
 	public int getCustomerCode() {
 		return customerCode;
 	}
@@ -98,13 +94,12 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [customerCode="
-				+ customerCode + ", customerName=" + customerName
-				+ ", customerAddress=" + customerAddress + ", customerPincode="
-				+ customerPincode + ", customerEmail=" + customerEmail
-				+ ", contactNumber=" + contactNumber + ", registrationDate="
-				+ registrationDate + ", createdBy=" + createdBy
-				+ ", modifiedDate=" + modifiedDate + "]";
+		return "Customer [customerCode=" + customerCode + ", customerName="
+				+ customerName + ", customerAddress=" + customerAddress
+				+ ", customerPincode=" + customerPincode + ", customerEmail="
+				+ customerEmail + ", contactNumber=" + contactNumber
+				+ ", registrationDate=" + registrationDate + ", createdBy="
+				+ createdBy + ", modifiedDate=" + modifiedDate + "]";
 	}
 
 	public Customer(int customerCode, String customerName,
@@ -112,7 +107,7 @@ public class Customer {
 			String customerEmail, String contactNumber,
 			String registrationDate, String createdBy, String modifiedDate) {
 		super();
-		
+
 		this.customerCode = customerCode;
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;

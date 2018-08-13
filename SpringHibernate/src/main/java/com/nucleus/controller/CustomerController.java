@@ -15,7 +15,7 @@ import com.nucleus.model.Customer;
 import com.nucleus.service.CustomerService;
 
 @Controller
-//@RequestMapping("/customer")
+//@RequestMapping("/secured")
 public class CustomerController {
 	@Autowired
 	CustomerService customerService;
@@ -108,10 +108,10 @@ public class CustomerController {
 
 	}
 	
-	@RequestMapping(value = "/LogOutController")
+	/*@RequestMapping(value = "/LogOutController")
 	public String logout() {
-		
-		return "index";
-	}
+		customerService.logout();
+		return "logout";
+	}*/
 
 }

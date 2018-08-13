@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,7 +18,7 @@ function noBack()
 }
 </script>
 <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
-
+<!-- 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -26,7 +26,7 @@ function noBack()
     </div>
     <ul class="nav navbar-nav">
       
-       <li class="active"><a href="adduser">NewUser</a></li>
+       <li class="active"><a href="adduser">NewUser</a></li> -->
        <!-- <li class="active"><a href="update">Update</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
         <ul class="dropdown-menu">

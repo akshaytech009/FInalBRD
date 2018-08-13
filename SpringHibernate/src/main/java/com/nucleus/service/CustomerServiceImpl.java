@@ -46,4 +46,9 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDao.updateCustomer(customer);
 	}
 
+//	public void logout() {
+//		customerDao.logout();
+//		
+//	}
+
 }

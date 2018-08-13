@@ -11,4 +11,5 @@ public interface CustomerService {
 	public Customer viewCustomer(int customerCode);
 	public List<Customer> viewAll();
 	public Customer updateCustomer(Customer customer);
+//	public void logout();
 }

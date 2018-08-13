@@ -1,5 +1,7 @@
 package com.nucleus.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,15 +13,18 @@ import org.springframework.web.servlet.ModelAndView;
 import com.nucleus.model.User;
 import com.nucleus.service.UserService;
 
-
-
-
 @Controller
-
 public class UserController {
-	
+
 	@Autowired
 	UserService userService;
+
+	@RequestMapping(value = "/User")
+	public String user() {
+
+		return "SplitUser";
+
+	}
 
 	@RequestMapping("/adduser")
 	public ModelAndView adduser(User user) {
@@ -34,17 +39,31 @@ public class UserController {
 		return new ModelAndView("userAdded");
 
 	}
-	/*@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
 	public String deleteuser() {
 
 		return "DeleteUser";
 
 	}
 
-	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
 	public String delete(Model model,
-			@RequestParam("customerCode") String customerCode) {
-		customerService.deleteCustomer(Integer.parseInt(customerCode));
+
+	@RequestParam("id") String id) {
+		userService.deleteUser(Integer.parseInt(id));
 		return "deleteCustomer";
-}*/
+	}
+
+	@RequestMapping(value = "/viewallUser", method = RequestMethod.GET)
+	public String viewAll(Model model) {
+
+		List<User> user = userService.viewAllUser();
+
+		model.addAttribute("user", user);
+
+		return "viewAllUser";
+
+	}
+
 }

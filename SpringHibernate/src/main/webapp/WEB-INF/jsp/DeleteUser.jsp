@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -41,13 +41,13 @@
 		</ul>
 	</div>
 	</nav> -->
-	<form action="delete" method="post">
+	<form action="deleteUser" method="post">
 		<div class="container">
 
 			<hr>
 
-			<label for="username"><b>username</b></label> <input
-				type="text" placeholder="Enter Customer Code" name="username"
+			<label for="id"><b>id</b></label> <input
+				type="text" placeholder="Enter id" name="id"
 				required>
 
 
